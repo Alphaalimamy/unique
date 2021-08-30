@@ -1,0 +1,287 @@
+:root {
+  --mainColor: #a97bfd;
+  --primaryColor: #130827;
+  --hover: #421f81;
+  --heading: #d3ad7f;
+  --mainBlack: #13131a;
+  --bg: #010103;
+  --border: 0.5rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--primaryColor);
+}
+
+/* GENERAL */
+section {
+  padding: 1.5rem 7%;
+}
+.heading {
+  text-transform: uppercase;
+  color: var(--heading);
+  padding-bottom: 0.5rem;
+  font-size: 4rem;
+  text-align: center;
+}
+.heading span {
+  color: #fff;
+  margin-left: 0.5rem;
+}
+/* END OF GENERAL */
+
+.header {
+  color: #fff;
+  display: flex;
+  background: #010103;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  z-index: 100;
+}
+
+.navbar a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navbar a:hover {
+  border-bottom: var(--border);
+  padding: 0.5rem 1.5rem;
+  letter-spacing: 0.2rem;
+  background: var(--hover);
+}
+.icon {
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+#menu-btn {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(90vh - 10rem);
+    background-color: var(--mainColor);
+    width: 30rem;
+  }
+  .active {
+    right: 0;
+  }
+  #menu-btn {
+    display: inline-block;
+  }
+  .navbar a {
+    display: block;
+    margin: 3.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .home .row {
+    display: block;
+  }
+}
+
+/* Home section */
+.home {
+  height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6.9rem;
+}
+
+.home .content {
+  max-width: 60rem;
+  color: #fff;
+}
+.home .content h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.home .content p {
+  font-size: 2rem;
+  letter-spacing: 3.5px;
+}
+/* End of home section */
+
+/* ABOUT section */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  background: var(--mainColor);
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.row .image {
+  border: var(--border);
+}
+.row img {
+  width: 100%;
+}
+.row .content {
+  flex: 1 1 30rem;
+  color: #fff;
+}
+.row .content h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+.row .content p {
+  font-size: 1.8rem;
+  text-align: justify;
+  line-height: 2;
+}
+/* END OF ABOUT section */
+
+/* SERVICES */
+.service {
+  background: #13131a;
+}
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.box {
+  color: #fff;
+  background: var(--bg);
+  border: var(--border);
+}
+.box:hover {
+  background: var(--hover);
+  transform: scale(1.01);
+}
+.box .icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.box h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.box p {
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 2;
+}
+.box p,
+h2 {
+  padding: 0 1.75rem;
+}
+/* END OF SERVICES */
+
+/* COURSES */
+
+.course {
+  background: var(--bg);
+}
+.course .about-course {
+  color: #ccc;
+  padding-bottom: 1.5rem;
+}
+.about-course h3 {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+.about-course p {
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.box img {
+  width: 100%;
+  height: 20rem;
+}
+/* END OF COURSE */
+
+/* CONTACT */
+.conact-box {
+  color: #fff;
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.details {
+  font-size: 2rem;
+}
+
+.contact-details {
+  font-size: 1.5rem;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: var(--border);
+}
+
+.contact-details {
+  flex: 1 1 30rem;
+}
+
+.form {
+  flex: 1 1 30rem;
+}
+.inputBox input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+
+.inputBox span {
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+/* END OF CONTACT */
