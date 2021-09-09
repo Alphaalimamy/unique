@@ -1,7 +1,10 @@
 const menuBtn = document.querySelector("#menu-btn");
-const navbar= document.querySelector(".navbar");
-
+const navbar = document.querySelector(".navbar");
 
 menuBtn.addEventListener("click", () => {
-    navbar.classList.toggle("active")
-})
+  navbar.classList.toggle("active");
+});
+
+window.onscroll = () => {
+  navbar.classList.remove("active");
+};

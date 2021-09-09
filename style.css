@@ -1,5 +1,5 @@
 :root {
-  --mainColor: #a97bfd;
+  --mainColor: #3d1588;
   --primaryColor: #130827;
   --hover: #421f81;
   --heading: #d3ad7f;
@@ -73,6 +73,7 @@ section {
 .icon {
   cursor: pointer;
   font-size: 2.5rem;
+  display: none;
 }
 #menu-btn {
   display: none;
@@ -80,6 +81,12 @@ section {
 @media screen and (max-width: 992px) {
   html {
     font-size: 50%;
+  }
+
+  .icon {
+    cursor: pointer;
+    font-size: 2.5rem;
+    display: block;
   }
 }
 @media screen and (max-width: 768px) {
@@ -91,7 +98,7 @@ section {
     top: 100%;
     right: -100%;
     height: calc(90vh - 10rem);
-    background-color: var(--mainColor);
+    background-color: var(--mainBlack);
     width: 30rem;
   }
   .active {
@@ -131,13 +138,14 @@ section {
   color: #fff;
 }
 .home .content h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  padding: 0;
 }
 .home .content p {
-  font-size: 2rem;
-  letter-spacing: 3.5px;
+  font-size: 1.5rem;
+  letter-spacing: 3.4px;
 }
 /* End of home section */
 
@@ -148,7 +156,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  background: var(--mainColor);
+  background: var(--primaryColor);
   padding: 1.5rem;
   cursor: pointer;
 }
@@ -217,7 +225,7 @@ h2 {
 /* COURSES */
 
 .course {
-  background: var(--bg);
+  background: var(--mainColor);
 }
 .course .about-course {
   color: #ccc;
@@ -243,14 +251,25 @@ h2 {
 .conact-box {
   color: #fff;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 5rem;
   flex-wrap: wrap;
 }
 
 .details {
   font-size: 2rem;
+  display: flex;
+  padding: 1.5rem 0rem 0rem 1.5rem;
+}
+.details span {
+  margin-left: 1rem;
 }
 
+.icons {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
 .contact-details {
   font-size: 1.5rem;
 }
@@ -270,7 +289,8 @@ h2 {
 .form {
   flex: 1 1 30rem;
 }
-.inputBox input {
+.inputBox input,
+textarea {
   width: 100%;
   padding: 2rem;
   font-size: 1.7rem;
@@ -285,3 +305,46 @@ h2 {
   padding-left: 2rem;
 }
 /* END OF CONTACT */
+
+/* FOOTER */
+
+.footer {
+  color: #fff;
+  padding: 7rem;
+  background: #010103;
+}
+
+.share {
+  text-align: center;
+}
+.share a {
+  color: #fff;
+  margin: 1.5rem;
+}
+.links {
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.links a {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin: 0.25rem;
+  cursor: pointer;
+  border: 2px solid var(--mainColor);
+  padding: 0.5rem;
+}
+.links a:hover,
+.share a:hover {
+  background: var(--hover);
+  transform: scale(1.5);
+}
+
+.credit {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  text-transform: capitalize;
+}
