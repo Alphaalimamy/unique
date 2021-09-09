@@ -40,6 +40,10 @@ section {
   color: #fff;
   margin-left: 0.5rem;
 }
+.header img {
+  width: 3rem;
+  border-radius: 3rem;
+}
 /* END OF GENERAL */
 
 .header {
