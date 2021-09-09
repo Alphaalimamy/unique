@@ -324,11 +324,16 @@ textarea {
 .links {
   text-align: center;
   margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .links a {
   color: #fff;
   font-size: 2rem;
+
   text-transform: capitalize;
   text-decoration: none;
   margin: 0.25rem;
